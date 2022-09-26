@@ -17,12 +17,12 @@ class BosViewController: UIViewController {
     
     @IBOutlet var BosImage:UIImageView!
     
-    func getView() -> UIImageView {
-        // ダブルタップ
-        let doubleTap = UITapGestureRecognizer(target: BosImage, action: "tappdDouble:")
-        doubleTap.numberOfTapsRequired = 10
-        BosImage.addGestureRecognizer(doubleTap)
-    }
+//    func getView() -> UIImageView {
+//        // ダブルタップ
+//        let doubleTap = UITapGestureRecognizer(target: BosImage, action: "tappdDouble:")
+//        doubleTap.numberOfTapsRequired = 10
+//        BosImage.addGestureRecognizer(doubleTap)
+//    }
     
     func tappdDouble(sender: UITapGestureRecognizer!) {
         // ダブルタップしたときの処理

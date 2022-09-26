@@ -62,35 +62,37 @@ class Stage1ViewController: UIViewController {
             TimerImage.center = CGPoint(x:xrand, y:yrand)
             view.addSubview(TimerImage)
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                performSegue(withIdentifier: "Stage1toStage2", sender: nil)
-            }
+            //２秒後ステージ移動
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+//                performSegue(withIdentifier: "Stage1toStage2", sender: nil)
+//            }
+            
         }
     }
     //　ドラッグ時に呼ばれる
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?){
-        for i in 0...stonenum{
-            // タッチイベントを取得
-            let touchEvent = touches.first!
-            // ドラッグ前の座標, Swift 1.2 から
-            let preStonex = touchEvent.previousLocation(in: self.view).x
-            let preStoney = touchEvent.previousLocation(in: self.view).y
-            // ドラッグ後の座標
-            let newStonex = touchEvent.location(in: self.view).x
-            let newStoney = touchEvent.location(in: self.view).y
-            // ドラッグしたx座標の移動距離
-            let Stonedx = newStonex - preStonex
-            // ドラッグしたy座標の移動距離
-            let Stonedy = newStoney - preStoney
-            // 画像のフレーム
-            var viewFrame: CGRect = StoneImage[i].frame
-            // 移動分を反映させる
-            viewFrame.origin.x += Stonedx
-            viewFrame.origin.y += Stonedy
-            StoneImage[i].frame = viewFrame
-            self.view.addSubview(StoneImage[i])
-        }
-    }
+//    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?){
+//        for i in 0...stonenum{
+//            // タッチイベントを取得
+//            let touchEvent = touches.first!
+//            // ドラッグ前の座標, Swift 1.2 から
+//            let preStonex = touchEvent.previousLocation(in: self.view).x
+//            let preStoney = touchEvent.previousLocation(in: self.view).y
+//            // ドラッグ後の座標
+//            let newStonex = touchEvent.location(in: self.view).x
+//            let newStoney = touchEvent.location(in: self.view).y
+//            // ドラッグしたx座標の移動距離
+//            let Stonedx = newStonex - preStonex
+//            // ドラッグしたy座標の移動距離
+//            let Stonedy = newStoney - preStoney
+//            // 画像のフレーム
+//            var viewFrame: CGRect = StoneImage[i].frame
+//            // 移動分を反映させる
+//            viewFrame.origin.x += Stonedx
+//            viewFrame.origin.y += Stonedy
+//            StoneImage[i].frame = viewFrame
+//            self.view.addSubview(StoneImage[i])
+//        }
+//    }
     
     @IBOutlet var HPText:UILabel!
     
@@ -108,43 +110,45 @@ class Stage1ViewController: UIViewController {
     var n:Int=0
     var p:Int!
     
-    func gousei(){
-        for k in 0...stonenum{
-            for j in 0...stonenum{
-                for m in 0...stonenum{
-                    for n in 0...stonenum{
-                        if (stonex[k]==stonex[j])&&(stonex[j]==stonex[m])&&(stonex[m]==stonex[n]){
-                            if (stoney[k]==stoney[j])&&(stoney[j]==stoney[m])&&(stoney[m]==stoney[n]){
-                                StoneImage[k].isHidden=true
-                                StoneImage[j].isHidden=true
-                                StoneImage[m].isHidden=true
-                                StoneImage[n].isHidden=true
-                                let image1:UIImage = UIImage(named:"Sekki")!
-                                SekkiImage[p]=UIImageView(image:image1)
-                                SekkiImage[p].center = CGPoint(x:stonex[k], y:stoney[k])
-                                view.addSubview(SekkiImage[p])
-                                p=p+1
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    var e:Int!
-    func getView() -> UIView {
-        for e in 0...enemynum{
-            // ダブルタップ
-            let doubleTap = UITapGestureRecognizer(target: EnemyImage, action: "tappdDouble:")
-            doubleTap.numberOfTapsRequired = 2
-            EnemyImage[e].addGestureRecognizer(doubleTap)
-        }
-    }
+//    func gousei(){
+//        for k in 0...stonenum{
+//            for j in 0...stonenum{
+//                for m in 0...stonenum{
+//                    for n in 0...stonenum{
+//                        if (stonex[k]==stonex[j])&&(stonex[j]==stonex[m])&&(stonex[m]==stonex[n]){
+//                            if (stoney[k]==stoney[j])&&(stoney[j]==stoney[m])&&(stoney[m]==stoney[n]){
+//                                StoneImage[k].isHidden=true
+//                                StoneImage[j].isHidden=true
+//                                StoneImage[m].isHidden=true
+//                                StoneImage[n].isHidden=true
+//                                let image1:UIImage = UIImage(named:"Sekki")!
+//                                SekkiImage[p]=UIImageView(image:image1)
+//                                SekkiImage[p].center = CGPoint(x:stonex[k], y:stoney[k])
+//                                view.addSubview(SekkiImage[p])
+//                                p=p+1
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
     
-    func tappdDouble(sender: UITapGestureRecognizer!) {
-        // ダブルタップしたときの処理
-        EnemyImage[e].isHidden=true
-    }
+    //連続タップで敵の画像が消える
+//    var e:Int!
+//    func getView() -> UIView {
+//        for e in 0...enemynum{
+//            // ダブルタップ
+//            let doubleTap = UITapGestureRecognizer(target: EnemyImage, action: "tappdDouble:")
+//            doubleTap.numberOfTapsRequired = 2
+//            EnemyImage[e].addGestureRecognizer(doubleTap)
+//        }
+//    }
+//    //連続タップで敵の画像が消える
+//    func tappdDouble(sender: UITapGestureRecognizer!) {
+//        // ダブルタップしたときの処理
+//        EnemyImage[e].isHidden=true
+//    }
     
     
     override func viewWillDisappear(_ animated: Bool) {

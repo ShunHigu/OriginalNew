@@ -72,37 +72,37 @@ class Stage1ViewController: UIViewController {
         }
     }
     //　ドラッグ時に呼ばれる
-//    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?){
-//        for i in 0...stonenum{
-//            // タッチイベントを取得
-//            let touchEvent = touches.first!
-//            // ドラッグ前の座標, Swift 1.2 から
-//            let preStonex = touchEvent.previousLocation(in: self.view).x
-//            let preStoney = touchEvent.previousLocation(in: self.view).y
-//            // ドラッグ後の座標
-//            let newStonex = touchEvent.location(in: self.view).x
-//            let newStoney = touchEvent.location(in: self.view).y
-//            // ドラッグしたx座標の移動距離
-//            let Stonedx = newStonex - preStonex
-//            // ドラッグしたy座標の移動距離
-//            let Stonedy = newStoney - preStoney
-//            // 画像のフレーム
-//            var viewFrame: CGRect = StoneImage[i].frame
-//            // 移動分を反映させる
-//            viewFrame.origin.x += Stonedx
-//            viewFrame.origin.y += Stonedy
-//            StoneImage[i].frame = viewFrame
-//            self.view.addSubview(StoneImage[i])
-//        }
-//    }
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?){
+        for i in 0...stonenum{
+            // タッチイベントを取得
+            let touchEvent = touches.first!
+            // ドラッグ前の座標, Swift 1.2 から
+            let preStonex = touchEvent.previousLocation(in: self.view).x
+            let preStoney = touchEvent.previousLocation(in: self.view).y
+            // ドラッグ後の座標
+            let newStonex = touchEvent.location(in: self.view).x
+            let newStoney = touchEvent.location(in: self.view).y
+            // ドラッグしたx座標の移動距離
+            let Stonedx = newStonex - preStonex
+            // ドラッグしたy座標の移動距離
+            let Stonedy = newStoney - preStoney
+            // 画像のフレーム
+            var viewFrame: CGRect = StoneImage[i].frame
+            // 移動分を反映させる
+            viewFrame.origin.x += Stonedx
+            viewFrame.origin.y += Stonedy
+            StoneImage[i].frame = viewFrame
+            self.view.addSubview(StoneImage[i])
+        }
+    }
     
     @IBOutlet var HPText:UILabel!
     
     var HP:Int=100
     
     
-//    var stonex:[Double]=[]
-//    var stoney:[Double]=[]
+//    var stoneX:[Double]=[]
+//    var stoneY:[Double]=[]
 //
 //
 //
@@ -117,7 +117,7 @@ class Stage1ViewController: UIViewController {
 //            for j in 0...stonenum{
 //                for m in 0...stonenum{
 //                    for n in 0...stonenum{
-//                        if (stonex[k]==stonex[j])&&(stonex[j]==stonex[m])&&(stonex[m]==stonex[n]){
+//                        if (stoneX[k]==stoneX[j])&&(stoneX[j]==stoneX[m])&&(stonex[m]==stonex[n]){
 //                            if (stoney[k]==stoney[j])&&(stoney[j]==stoney[m])&&(stoney[m]==stoney[n]){
 //                                StoneImage[k].isHidden=true
 //                                StoneImage[j].isHidden=true

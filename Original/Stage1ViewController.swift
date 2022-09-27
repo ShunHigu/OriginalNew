@@ -12,8 +12,7 @@ class Stage1ViewController: UIViewController {
     //    @IBOutlet var RendaImage:[UIImageView]!
     
     var num:Int = 0
-    var enemynum:Int=0
-    var stonenum:Int=0
+    
     
     var timer: Timer!
     
@@ -32,6 +31,9 @@ class Stage1ViewController: UIViewController {
     var StoneImage:[UIImageView]=[]
     var EnemyImage:[UIImageView]=[]
     var SekkiImage:[UIImageView]=[]
+    
+    var enemynum:Int=0
+    var stonenum:Int=0
     
     @IBAction func Renda(){
         num=Int.random(in: 1...100)
@@ -99,17 +101,17 @@ class Stage1ViewController: UIViewController {
     var HP:Int=100
     
     
-    var stonex:[Double]=[]
-    var stoney:[Double]=[]
-    
-    
-                
-    var k:Int=0
-    var j:Int=0
-    var m:Int=0
-    var n:Int=0
-    var p:Int!
-    
+//    var stonex:[Double]=[]
+//    var stoney:[Double]=[]
+//
+//
+//
+//    var k:Int=0
+//    var j:Int=0
+//    var m:Int=0
+//    var n:Int=0
+//    var p:Int!
+//
 //    func gousei(){
 //        for k in 0...stonenum{
 //            for j in 0...stonenum{

@@ -8,26 +8,54 @@
 import UIKit
 
 class BosViewController: UIViewController {
+    
+    var timer: Timer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.update), userInfo:nil, repeats: true)
+        timer.fire()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBOutlet var BosImage:UIImageView!
+    @IBOutlet var BossImage:UIImageView!
     
 //    func getView() -> UIImageView {
 //        // ダブルタップ
-//        let doubleTap = UITapGestureRecognizer(target: BosImage, action: "tappdDouble:")
+//        let doubleTap = UITapGestureRecognizer(target: BossImage, action: "tappdDouble:")
 //        doubleTap.numberOfTapsRequired = 10
-//        BosImage.addGestureRecognizer(doubleTap)
+//        BossImage.addGestureRecognizer(doubleTap)
 //    }
     
-    func tappdDouble(sender: UITapGestureRecognizer!) {
-        // ダブルタップしたときの処理
+//    func tappdDouble(sender: UITapGestureRecognizer!) {
+//        //２秒後ステージ移動
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+//            performSegue(withIdentifier: "BossToClear", sender: nil)
+//        }
+//    }
         
+    override func viewWillDisappear(_ animated: Bool) {
+            super.viewWillDisappear(true)
+            timer.invalidate()
     }
+     
+    @IBOutlet var HPText:UILabel!
+    
+    var i:Int!
+    var HP:Int=0
+    
+    @objc func update(tm: Timer) {
+        if BossImage.isHidden==false{
+            //繰り返し動作
+            HP-=10
+            HPText.text=("\(HP)/100")
+        }
+    }
+    
+        
+    
     
     
     

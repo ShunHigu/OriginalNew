@@ -16,6 +16,7 @@
 		7922351C28DB4F77005E90D6 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7922351B28DB4F77005E90D6 /* LobbyViewController.swift */; };
 		7922351E28DB5B05005E90D6 /* Stage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7922351D28DB5B05005E90D6 /* Stage1ViewController.swift */; };
 		7922352028E0B3D8005E90D6 /* BosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7922351F28E0B3D7005E90D6 /* BosViewController.swift */; };
+		7922352228E28BA9005E90D6 /* ClearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7922352128E28BA9005E90D6 /* ClearViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		7922351B28DB4F77005E90D6 /* LobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
 		7922351D28DB5B05005E90D6 /* Stage1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage1ViewController.swift; sourceTree = "<group>"; };
 		7922351F28E0B3D7005E90D6 /* BosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BosViewController.swift; sourceTree = "<group>"; };
+		7922352128E28BA9005E90D6 /* ClearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				7922351B28DB4F77005E90D6 /* LobbyViewController.swift */,
 				7922351D28DB5B05005E90D6 /* Stage1ViewController.swift */,
 				7922351F28E0B3D7005E90D6 /* BosViewController.swift */,
+				7922352128E28BA9005E90D6 /* ClearViewController.swift */,
 				7922350D28DB4F50005E90D6 /* Main.storyboard */,
 				7922351028DB4F51005E90D6 /* Assets.xcassets */,
 				7922351228DB4F51005E90D6 /* LaunchScreen.storyboard */,
@@ -153,6 +156,7 @@
 				7922352028E0B3D8005E90D6 /* BosViewController.swift in Sources */,
 				7922350A28DB4F50005E90D6 /* SceneDelegate.swift in Sources */,
 				7922351C28DB4F77005E90D6 /* LobbyViewController.swift in Sources */,
+				7922352228E28BA9005E90D6 /* ClearViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

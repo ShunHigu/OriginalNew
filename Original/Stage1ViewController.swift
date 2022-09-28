@@ -22,8 +22,8 @@ class Stage1ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.update), userInfo:nil, repeats: true)
-        timer.fire()
+//        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.update), userInfo:nil, repeats: true)
+//        timer.fire()
         
         // Do any additional setup after loading the view.
     }

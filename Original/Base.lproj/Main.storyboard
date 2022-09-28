@@ -20,10 +20,6 @@
                                 <rect key="frame" x="234" y="494" width="114" height="129"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sAn-ta-RJc">
-                                <rect key="frame" x="243" y="111" width="89" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Stage1" translatesAutoresizingMaskIntoConstraints="NO" id="ac4-a8-B8J">
                                 <rect key="frame" x="-95" y="0.0" width="620" height="844"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -39,6 +35,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0a-EF-K11">
+                                <rect key="frame" x="82" y="654" width="201" height="174"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="RendaButton"/>
+                                <connections>
+                                    <action selector="Renda" destination="8Ry-Dj-BCc" eventType="touchUpInside" id="ebB-qh-QWO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4fj-o5-ada"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -73,7 +79,7 @@
                                 <state key="normal" image="RendaButton"/>
                                 <connections>
                                     <action selector="Renda" destination="8Ry-Dj-BCc" eventType="touchUpInside" id="Agz-d6-mci"/>
-                                    <segue destination="dhc-Ew-uUg" kind="presentation" id="r3k-BZ-jHy"/>
+                                    <segue destination="dhc-Ew-uUg" kind="presentation" modalPresentationStyle="fullScreen" id="r3k-BZ-jHy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -121,26 +127,26 @@
             <objects>
                 <viewController id="dhc-Ew-uUg" customClass="BosViewController" customModule="Original" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cak-Eu-f4R">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BosStage" translatesAutoresizingMaskIntoConstraints="NO" id="I0J-kE-6Ma">
-                                <rect key="frame" x="-59" y="-165" width="508" height="1236"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BosStage" translatesAutoresizingMaskIntoConstraints="NO" id="I0J-kE-6Ma">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TimerBox" translatesAutoresizingMaskIntoConstraints="NO" id="DW2-Xh-RPc">
-                                <rect key="frame" x="246" y="548" width="110" height="110"/>
+                                <rect key="frame" x="241" y="498" width="110" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100/100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEF-yh-UP7">
-                                <rect key="frame" x="0.0" y="569" width="233" height="69"/>
+                                <rect key="frame" x="0.0" y="519" width="233" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="57"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6s-Oy-qie">
-                                <rect key="frame" x="81" y="666" width="201" height="174"/>
+                                <rect key="frame" x="69" y="654" width="201" height="174"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -159,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="izC-gh-2lY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="372" y="-9"/>
+            <point key="canvasLocation" x="370.76923076923077" y="-9.24170616113744"/>
         </scene>
         <!--Lobby View Controller-->
         <scene sceneID="tne-QT-ifu">

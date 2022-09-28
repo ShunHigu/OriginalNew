@@ -28,6 +28,8 @@ class Stage1ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    
     var StoneImage:[UIImageView]=[]
     var EnemyImage:[UIImageView]=[]
     var SekkiImage:[UIImageView]=[]
@@ -71,34 +73,52 @@ class Stage1ViewController: UIViewController {
             
         }
     }
-    //　ドラッグ時に呼ばれる
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?){
-        for i in 0...stonenum{
-            // タッチイベントを取得
-            let touchEvent = touches.first!
-            // ドラッグ前の座標, Swift 1.2 から
-            let preStonex = touchEvent.previousLocation(in: self.view).x
-            let preStoney = touchEvent.previousLocation(in: self.view).y
-            // ドラッグ後の座標
-            let newStonex = touchEvent.location(in: self.view).x
-            let newStoney = touchEvent.location(in: self.view).y
-            // ドラッグしたx座標の移動距離
-            let Stonedx = newStonex - preStonex
-            // ドラッグしたy座標の移動距離
-            let Stonedy = newStoney - preStoney
-            // 画像のフレーム
-            var viewFrame: CGRect = StoneImage[i].frame
-            // 移動分を反映させる
-            viewFrame.origin.x += Stonedx
-            viewFrame.origin.y += Stonedy
-            StoneImage[i].frame = viewFrame
-            self.view.addSubview(StoneImage[i])
-        }
-    }
     
-    @IBOutlet var HPText:UILabel!
-    
-    var HP:Int=100
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(true)
+//        timer.invalidate()
+//    }
+//
+//    var i:Int!
+//    var h:Int=0
+//    @objc func update(tm: Timer) {
+////        for i in 0...enemynum-1{
+////            if EnemyImage[i].isHidden==false{
+////                h=h+1
+////            }
+////        }
+//        //繰り返し動作
+//        HP-=10*h
+//        HPText.text=("\(HP)/100")
+//    }
+//    //　ドラッグ時に呼ばれる
+//    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?){
+//        for i in 0...stonenum{
+//            // タッチイベントを取得
+//            let touchEvent = touches.first!
+//            // ドラッグ前の座標, Swift 1.2 から
+//            let preStonex = touchEvent.previousLocation(in: self.view).x
+//            let preStoney = touchEvent.previousLocation(in: self.view).y
+//            // ドラッグ後の座標
+//            let newStonex = touchEvent.location(in: self.view).x
+//            let newStoney = touchEvent.location(in: self.view).y
+//            // ドラッグしたx座標の移動距離
+//            let Stonedx = newStonex - preStonex
+//            // ドラッグしたy座標の移動距離
+//            let Stonedy = newStoney - preStoney
+//            // 画像のフレーム
+//            var viewFrame: CGRect = StoneImage[i].frame
+//            // 移動分を反映させる
+//            viewFrame.origin.x += Stonedx
+//            viewFrame.origin.y += Stonedy
+//            StoneImage[i].frame = viewFrame
+//            self.view.addSubview(StoneImage[i])
+//        }
+//    }
+//
+//    @IBOutlet var HPText:UILabel!
+//
+//    var HP:Int=100
     
     
 //    var stoneX:[Double]=[]
@@ -152,22 +172,6 @@ class Stage1ViewController: UIViewController {
 //        EnemyImage[e].isHidden=true
 //    }
     
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        timer.invalidate()
-    }
-    
-    var i:Int!
-    @objc func update(tm: Timer) {
-        for i in 0...enemynum{
-            if EnemyImage[i].isHidden==false{
-                //繰り返し動作
-                HP-=10
-                HPText.text=("\(HP)/100")
-            }
-        }
-    }
     
     
     

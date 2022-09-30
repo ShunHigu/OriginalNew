@@ -1,25 +1,19 @@
 //
-//  LobbyViewController.swift
+//  Stage3ViewController.swift
 //  Original
 //
-//  Created by 日暮駿之介 on 2022/09/21.
+//  Created by 日暮駿之介 on 2022/09/30.
 //
 
 import UIKit
 
-class LobbyViewController: UIViewController {
-    @IBAction func button(_ sender: Any) {
-            performSegue(withIdentifier: "LobbyToRule", sender: nil)
-    }
+class Stage3ViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-    
-     
-    
     
 
     /*

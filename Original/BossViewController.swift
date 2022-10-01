@@ -1,13 +1,13 @@
 //
-//  Stage3ViewController.swift
+//  BosViewController.swift
 //  Original
 //
-//  Created by 日暮駿之介 on 2022/09/30.
+//  Created by 日暮駿之介 on 2022/09/26.
 //
 
 import UIKit
 
-class Stage3ViewController: UIViewController {
+class BossViewController: UIViewController {
     
     //    @IBOutlet var RendaImage:[UIImageView]!
     
@@ -15,6 +15,9 @@ class Stage3ViewController: UIViewController {
     
     
     var timer: Timer!
+    
+    
+    var BossImage:BossTapImageView
     
     var IronImage:[TouchImageView]=[]
     var EnemyImage:[Enemy3TapImageView]=[]
@@ -398,47 +401,7 @@ class Stage3ViewController: UIViewController {
     
 }
 
-//class TouchImageView:UIImageView{
-//    public var touched=false
-//
-//    override init(image:UIImage?){
-//        super.init(image: image)
-//        self.isUserInteractionEnabled=true
-//    }
-//
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//
-//        super.touchesBegan(touches, with: event)
-//
-//        next?.touchesBegan(touches, with: event)
-//        let touch=touches.first
-//    }
-//
-//    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        super.touchesMoved(touches, with: event)
-//
-//        next?.touchesMoved(touches, with: event)
-//        let touch=touches.first
-//        let prevPos=touch?.previousLocation(in: self.superview)
-//        let nowPos=touch?.location(in: self.superview)
-//        let diff=nowPos!-prevPos!
-//        self.layer.position+=diff
-//        print(diff)
-//    }
-//
-//    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        super.touchesEnded(touches, with: event)
-//
-//        next?.touchesEnded(touches, with: event)
-//        let touch=touches.first
-//    }
-//}
-
-class Enemy3TapImageView:UIImageView{
+class BossTapImageView:UIImageView{
     var enemyHP:Int=100
     
     public var touched=false
@@ -458,7 +421,7 @@ class Enemy3TapImageView:UIImageView{
         let touch=touches.first
         
         let randnum=Int.random(in: 1...2)
-        enemyHP=enemyHP-20
+        enemyHP=enemyHP-15
         print(enemyHP)
         if enemyHP<=0{
             self.removeFromSuperview()
@@ -490,17 +453,3 @@ class Enemy3TapImageView:UIImageView{
         self.performSegueWithIdentifier("Stage2ToCrear", sender: self)
     }
 }
-
-//
-//extension CGPoint: AdditiveArithmetic {
-//    public static func - (lhs: CGPoint, rhs: CGPoint) -> CGPoint {
-//        return CGPoint(x: lhs.x - rhs.x, y: lhs.y - rhs.y)
-//    }
-//    public static func + (lhs: CGPoint, rhs: CGPoint) -> CGPoint {
-//        return CGPoint(x: lhs.x + rhs.x, y: lhs.y + rhs.y)
-//    }
-//    func toCGSize() -> CGSize {
-//        return CGSize(width: self.x, height: self.y)
-//    }
-//}
-

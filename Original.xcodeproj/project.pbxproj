@@ -15,11 +15,14 @@
 		7922351428DB4F51005E90D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7922351228DB4F51005E90D6 /* LaunchScreen.storyboard */; };
 		7922351C28DB4F77005E90D6 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7922351B28DB4F77005E90D6 /* LobbyViewController.swift */; };
 		7922351E28DB5B05005E90D6 /* Stage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7922351D28DB5B05005E90D6 /* Stage1ViewController.swift */; };
-		7922352028E0B3D8005E90D6 /* BosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7922351F28E0B3D7005E90D6 /* BosViewController.swift */; };
+		7922352028E0B3D8005E90D6 /* BossViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7922351F28E0B3D7005E90D6 /* BossViewController.swift */; };
 		7922352228E28BA9005E90D6 /* ClearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7922352128E28BA9005E90D6 /* ClearViewController.swift */; };
 		7922352428E5B1F5005E90D6 /* RuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7922352328E5B1F4005E90D6 /* RuleViewController.swift */; };
 		7922352628E5EE04005E90D6 /* Stage2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7922352528E5EE04005E90D6 /* Stage2ViewController.swift */; };
 		7922352828E61B0B005E90D6 /* Stage3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7922352728E61B0B005E90D6 /* Stage3ViewController.swift */; };
+		7976B54928E7D37D004DFC8C /* GetTimer1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7976B54828E7D37D004DFC8C /* GetTimer1ViewController.swift */; };
+		7976B54B28E7D38F004DFC8C /* GetTimer2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7976B54A28E7D38F004DFC8C /* GetTimer2ViewController.swift */; };
+		7976B54D28E7D3A2004DFC8C /* GetTimer3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7976B54C28E7D3A2004DFC8C /* GetTimer3ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,11 +36,14 @@
 		7922351528DB4F51005E90D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7922351B28DB4F77005E90D6 /* LobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
 		7922351D28DB5B05005E90D6 /* Stage1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage1ViewController.swift; sourceTree = "<group>"; };
-		7922351F28E0B3D7005E90D6 /* BosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BosViewController.swift; sourceTree = "<group>"; };
+		7922351F28E0B3D7005E90D6 /* BossViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BossViewController.swift; sourceTree = "<group>"; };
 		7922352128E28BA9005E90D6 /* ClearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearViewController.swift; sourceTree = "<group>"; };
 		7922352328E5B1F4005E90D6 /* RuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleViewController.swift; sourceTree = "<group>"; };
 		7922352528E5EE04005E90D6 /* Stage2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage2ViewController.swift; sourceTree = "<group>"; };
 		7922352728E61B0B005E90D6 /* Stage3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage3ViewController.swift; sourceTree = "<group>"; };
+		7976B54828E7D37D004DFC8C /* GetTimer1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTimer1ViewController.swift; sourceTree = "<group>"; };
+		7976B54A28E7D38F004DFC8C /* GetTimer2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTimer2ViewController.swift; sourceTree = "<group>"; };
+		7976B54C28E7D3A2004DFC8C /* GetTimer3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTimer3ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,12 +84,15 @@
 				7922351D28DB5B05005E90D6 /* Stage1ViewController.swift */,
 				7922352528E5EE04005E90D6 /* Stage2ViewController.swift */,
 				7922352728E61B0B005E90D6 /* Stage3ViewController.swift */,
-				7922351F28E0B3D7005E90D6 /* BosViewController.swift */,
+				7922351F28E0B3D7005E90D6 /* BossViewController.swift */,
 				7922352128E28BA9005E90D6 /* ClearViewController.swift */,
 				7922350D28DB4F50005E90D6 /* Main.storyboard */,
 				7922351028DB4F51005E90D6 /* Assets.xcassets */,
 				7922351228DB4F51005E90D6 /* LaunchScreen.storyboard */,
 				7922351528DB4F51005E90D6 /* Info.plist */,
+				7976B54828E7D37D004DFC8C /* GetTimer1ViewController.swift */,
+				7976B54A28E7D38F004DFC8C /* GetTimer2ViewController.swift */,
+				7976B54C28E7D3A2004DFC8C /* GetTimer3ViewController.swift */,
 			);
 			path = Original;
 			sourceTree = "<group>";
@@ -163,11 +172,14 @@
 				7922350C28DB4F50005E90D6 /* ViewController.swift in Sources */,
 				7922352428E5B1F5005E90D6 /* RuleViewController.swift in Sources */,
 				7922350828DB4F50005E90D6 /* AppDelegate.swift in Sources */,
-				7922352028E0B3D8005E90D6 /* BosViewController.swift in Sources */,
+				7922352028E0B3D8005E90D6 /* BossViewController.swift in Sources */,
 				7922350A28DB4F50005E90D6 /* SceneDelegate.swift in Sources */,
 				7922351C28DB4F77005E90D6 /* LobbyViewController.swift in Sources */,
+				7976B54D28E7D3A2004DFC8C /* GetTimer3ViewController.swift in Sources */,
 				7922352228E28BA9005E90D6 /* ClearViewController.swift in Sources */,
+				7976B54928E7D37D004DFC8C /* GetTimer1ViewController.swift in Sources */,
 				7922352628E5EE04005E90D6 /* Stage2ViewController.swift in Sources */,
+				7976B54B28E7D38F004DFC8C /* GetTimer2ViewController.swift in Sources */,
 				7922352828E61B0B005E90D6 /* Stage3ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
